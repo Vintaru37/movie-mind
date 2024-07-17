@@ -1,10 +1,16 @@
-import NavbarItem from "./NavbarItem";
+import NavbarItem from './NavbarItem';
+import SearchBox from './SearchBox';
 
 export default function Navbar() {
-  return (
-    <div className="flex justify-center gap-4 dark:bg-gray-600 bg-amber-400 p-4 lg:text-lg">
-        <NavbarItem title="Trending" param="fetchTrending"/>
-        <NavbarItem title="Top Rated" param="fetchTopRated"/>
-    </div>
-  )
+	return (
+		<div className=' dark:bg-gray-600 bg-amber-400 py-4 lg:text-lg'>
+			<div className='max-w-7xl px-4 mx-auto flex flex-wrap items-center justify-center sm:justify-between gap-6'>
+				<div className='flex gap-4'>
+					<NavbarItem title='Trending' param='fetchTrending' />
+					<NavbarItem title='Top Rated' param='fetchTopRated' />
+				</div>
+				<SearchBox />
+			</div>
+		</div>
+	);
 }

@@ -3,12 +3,13 @@ import './globals.css';
 import Header from '@/components/Header';
 import Navbar from '@/components/Navbar';
 import Providers from './Providers';
+import SearchBox from '@/components/SearchBox';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
 	title: 'Movie Mind',
-	description: "The only movie website you'll ever need!",
+	description: "The only movie database you'll ever need!",
 };
 
 export default function RootLayout({ children }) {
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
 				<Providers>
 					<Header />
 					<Navbar />
+
 					{children}
 				</Providers>
 			</body>
