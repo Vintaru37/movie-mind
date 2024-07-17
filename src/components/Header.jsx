@@ -15,12 +15,7 @@ export default function Header() {
 			<div className='flex items-center gap-4'>
 				<DarkModeSwitch />
 				<Link href={'/'} className='flex gap-1 items-center'>
-					<Image
-						src='/movemind-logo.png'
-						alt='MovieMind Logo'
-						width={180}
-						height={50}
-					/>
+					<span className='text-2xl text-gray-800 font-bold bg-amber-400 py-1 px-2 rounded-lg'>Movie Mind</span>
 				</Link>
 			</div>
 		</div>
