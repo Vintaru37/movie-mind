@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import MenuItem from './MenuItem';
 import { AiFillHome } from 'react-icons/ai';
 import { BsFillInfoCircleFill } from 'react-icons/bs';
