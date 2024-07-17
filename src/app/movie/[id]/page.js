@@ -2,7 +2,6 @@ import Image from 'next/image';
 
 import { FaStar } from 'react-icons/fa';
 
-
 import iso6391 from 'iso-639-1';
 import BackButton from '@/components/BackButton';
 export default async function MoviePage({ params }) {
@@ -38,27 +37,33 @@ export default async function MoviePage({ params }) {
 					<span className='text-base'>({movie.vote_count} votes)</span>
 				</p>
 				<h3 className='text-xl font-bold pt-2'>Movie information:</h3>
-				<p>Runtime: <span>{movie.runtime} minutes</span></p>
-				<p>Release date: <span>{movie.release_date}</span></p>
-				<p>Original language: <span>{languageName}</span></p>
+				<p>
+					Runtime: <span>{movie.runtime} minutes</span>
+				</p>
+				<p>
+					Release date: <span>{movie.release_date}</span>
+				</p>
+				<p>
+					Original language: <span>{languageName}</span>
+				</p>
 				<div className='mb-16'>
-					<h3 className='text-xl font-bold pt-2 mb-3'>
-						Production Companies:
-					</h3>
-                    <div className='flex flex-wrap gap-2'>
-					{movie.production_companies.length > 0 ? (
-                        movie.production_companies.map((company) => {
-                            return <span className='p-2 border'>{company.name}</span>;
-						})
-					) : (
-                        <span className='p-2 border'>
-							Unknown production companies
-						</span>
-					)}
-                    </div>
+					<h3 className='text-xl font-bold pt-2 mb-3'>Production Companies:</h3>
+					<div className='flex flex-wrap gap-2'>
+						{movie.production_companies.length > 0 ? (
+							movie.production_companies.map((company, id) => {
+								return (
+									<span key={id} className='p-2 border'>
+										{company.name}
+									</span>
+								);
+							})
+						) : (
+							<span className='p-2 border'>Unknown production companies</span>
+						)}
+					</div>
 				</div>
-                <br />
-            <BackButton />
+				<br />
+				<BackButton />
 			</div>
 		</div>
 	);
