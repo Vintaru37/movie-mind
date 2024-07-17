@@ -1,11 +1,13 @@
 'use client';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
 export default function NavbarItem({ title, param }) {
 	const searchParams = useSearchParams();
 	const genre = searchParams.get('genre');
 	return (
+		<Suspense>
 		<div>
 			<Link
 				href={`/?genre=${param}`}
@@ -17,5 +19,6 @@ export default function NavbarItem({ title, param }) {
 				{title}
 			</Link>
 		</div>
+		</Suspense>
 	);
 }
