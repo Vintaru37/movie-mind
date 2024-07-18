@@ -12,7 +12,7 @@ export default function Card({ result }) {
 		voteCount = result.vote_count;
 	}
 	return (
-		<div className='group'>
+		<div className='group mx-4 sm:mx-0'>
 			<Link href={`/movie/${result.id}`}>
 				<Image
 					src={`https://image.tmdb.org/t/p/original/${result.poster_path}`}
